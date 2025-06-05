@@ -20,14 +20,13 @@
         }
 
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
         .logo {
             font-size: 2.5rem;
@@ -131,15 +130,22 @@
         }
 
         .scratch-card {
-            width: 200px;
-            height: 120px;
-            margin: 0 auto 20px;
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: crosshair;
-            border: 3px solid;
-        }
+    width: 200px;
+    height: 130px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
 
         .scratch-card.bronze {
             border-color: #cd7f32;
