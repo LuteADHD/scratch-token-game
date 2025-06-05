@@ -1,1 +1,52 @@
-
+{
+  "name": "scratch-token-game",
+  "version": "1.0.0",
+  "description": "SCRATCH Token Gaming Platform - Real scratch cards on Solana blockchain",
+  "main": "frontend/index.html",
+  "scripts": {
+    "dev": "live-server frontend/",
+    "build": "npm run build:frontend && npm run build:contracts",
+    "build:frontend": "echo 'Building frontend...'",
+    "build:contracts": "cd smart-contracts && anchor build",
+    "test": "cd smart-contracts && anchor test",
+    "deploy:devnet": "cd smart-contracts && anchor deploy --provider.cluster devnet",
+    "deploy:mainnet": "cd smart-contracts && anchor deploy --provider.cluster mainnet",
+    "lint": "eslint frontend/js/",
+    "start": "node backend/server.js"
+  },
+  "keywords": [
+    "solana",
+    "blockchain",
+    "gaming",
+    "scratch-cards",
+    "defi",
+    "gambling",
+    "web3",
+    "cryptocurrency"
+  ],
+  "author": "SCRATCH Team",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "eslint": "^8.55.0",
+    "@types/node": "^20.10.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YourUsername/scratch-token-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YourUsername/scratch-token-game/issues"
+  },
+  "homepage": "https://github.com/YourUsername/scratch-token-game#readme"
+}
+Add package.json
