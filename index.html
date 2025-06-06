@@ -93,21 +93,24 @@
         }
 
         .scratch-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: center;
+}
 
         .scratch-card-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    width: 400px;
+    max-width: 90vw;
+}
 
         .scratch-card-container.bronze {
             border-color: #cd7f32;
@@ -144,7 +147,21 @@
     justify-content: center;
     font-weight: bold;
     color: #333;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.scratch-card::before {
+    content: "SCRATCH";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    z-index: 5;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
         .scratch-card.bronze {
